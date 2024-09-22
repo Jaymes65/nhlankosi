@@ -186,26 +186,7 @@ body {
 .fade-in-visible {
     opacity: 1;
 }
-/* Custom cursor */
-.cursor {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ffd700;
-    border-radius: 50%;
-    position: absolute;
-    pointer-events: none;
-    z-index: 10000;
-    transition: transform 0.1s ease;
-    transform: translate(-50%, -50%);
-}
 
-.cursor-grow {
-    transform: scale(2);
-}
-
-body {
-    cursor:default; /* Hide default cursor */
-}
 /* Accordion styling */
 .accordion {
     width: 80%;
