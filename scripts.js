@@ -3,7 +3,34 @@ function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
 }
+// Toggle Menu
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}
 
+// Sticky Header
+window.onscroll = function () {
+  const header = document.querySelector('header');
+  const sticky = header.offsetTop;
+  if (window.pageYOffset > sticky) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+};
+
+// Scroll-triggered animations
+const scrollElements = document.querySelectorAll('.fade-in');
+scrollElements.forEach((element) => {
+  window.addEventListener('scroll', () => {
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (elementTop < windowHeight - 100) {
+      element.classList.add('visible');
+    }
+  });
+});
 // Sticky Header
 window.onscroll = function() {
     const header = document.querySelector("header");
